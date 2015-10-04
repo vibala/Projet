@@ -1,0 +1,1453 @@
+2015-09-21 11:10:49 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /private/WebArenaGoupSIA-00-00/app/
+Stack Trace:
+#0 /home/bala/www/private/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/bala/www/private/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /home/bala/www/private/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 /home/bala/www/private/WebArenaGoupSIA-00-00/app/index.php(17): require('/home/bala/www/...')
+#4 {main}
+2015-09-21 11:11:03 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /private/WebArenaGoupSIA-00-00/app/webroot/
+Stack Trace:
+#0 /home/bala/www/private/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/bala/www/private/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /home/bala/www/private/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 12:41:24 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:41:33 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/app
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:41:37 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/app/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:42:01 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/app/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:44:02 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:44:41 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:44:47 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00//Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:45:01 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00//Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:45:02 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00//Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:45:11 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00//Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:45:16 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:45:24 Error: [MissingControllerException] Controller class ApController could not be found.
+Exception Attributes: array (
+  'class' => 'ApController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/ap/pArena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:45:30 Error: [MissingActionException] Action AppController::Arena() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Arena',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 12:46:00 Error: [MissingActionException] Action AppController::Arena() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Arena',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 12:46:54 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:47:58 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:48:11 Error: [MissingActionException] Action AppController::Controller() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Controller',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/Controller/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 12:48:22 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:49:12 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:49:19 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:49:40 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:49:40 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:50:15 Error: [MissingControllerException] Controller class WebArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'WebArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/WebArena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:50:22 Error: [MissingActionException] Action AppController::WebArena() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'WebArena',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/WebArena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 12:50:30 Error: [MissingControllerException] Controller class WebArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'WebArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/WebArena/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-21 12:51:25 Error: [MissingViewException] View file "Arenas/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Arenas/index.ctp',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#4 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-09-21 13:07:21 Error: [MissingActionException] Action ArenasController::fighter() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'fighter',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/fighter
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 13:07:46 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 34]
+2015-09-21 13:07:46 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/fighter
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/W...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/W...', 34, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/W...', 34, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-21 13:08:04 Error: [MissingActionException] Action ArenasController::fighter() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'fighter',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/fighter
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 13:08:35 Error: [MissingActionException] Action ArenasController::fighter() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'fighter',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/fighter
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-21 15:44:08 Error: Fatal Error (4): syntax error, unexpected '?' in [/var/www/html/WebArenaGoupSIA-00-00/app/View/Arenas/index.ctp, line 9]
+2015-09-21 15:44:08 Error: [FatalErrorException] syntax error, unexpected '?'
+Request URL: /WebArenaGoupSIA-00-00/Arenas/index
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/W...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/W...', 9, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/W...', 9, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-26 19:07:01 Error: [MissingActionException] Action ArenasController::index.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'index.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/index.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:07:11 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/index.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-26 19:08:20 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/login.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-26 19:08:29 Error: [MissingActionException] Action ArenasController::login.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'login.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/login.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:08:34 Error: [MissingControllerException] Controller class ArenaController could not be found.
+Exception Attributes: array (
+  'class' => 'ArenaController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arena/login.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-26 19:09:19 Error: [MissingActionException] Action AppController::Arena() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Arena',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/Arena/login.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:09:33 Error: [MissingActionException] Action AppController::Arenas() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Arenas',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/Arenas/login.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:09:53 Error: [MissingActionException] Action AppController::Arenas() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'Arenas',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/Arenas/diary.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:10:02 Error: [MissingControllerException] Controller class Diary.phpController could not be found.
+Exception Attributes: array (
+  'class' => 'Diary.phpController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/diary.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-26 19:10:10 Error: [MissingViewException] View file "App/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'App/index.ctp',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#4 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-09-26 19:11:09 Error: [MissingActionException] Action AppController::View() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'View',
+)
+Request URL: /WebArenaGoupSIA-00-00/app/View/Arenas/index.ctp
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:13:11 Error: [MissingActionException] Action ArenasController::index.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'index.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/index.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:13:33 Error: [MissingActionException] Action ArenasController::login.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'login.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/login.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 19:16:26 Error: Fatal Error (4): syntax error, unexpected '?' in [/var/www/html/WebArenaGoupSIA-00-00/app/View/Arenas/diary.ctp, line 9]
+2015-09-26 19:16:26 Error: [FatalErrorException] syntax error, unexpected '?'
+Request URL: /WebArenaGoupSIA-00-00/Arenas/diary
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/W...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/W...', 9, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/W...', 9, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-26 19:40:19 Error: [MissingActionException] Action ArenasController::ldiary() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'ldiary',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/ldiary
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-26 20:57:41 Error: Fatal Error (1): Call to undefined function ajouter() in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 43]
+2015-09-26 20:57:41 Error: [FatalErrorException] Call to undefined function ajouter()
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/W...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-26 21:51:46 Error: [MissingControllerException] Controller class AreanasController could not be found.
+Exception Attributes: array (
+  'class' => 'AreanasController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Areanas/login
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-27 00:19:23 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 44]
+2015-09-27 00:19:23 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/W...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 00:20:03 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 44]
+2015-09-27 00:20:03 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/W...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 00:25:04 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 44]
+2015-09-27 00:25:04 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/W...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 00:25:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 44]
+2015-09-27 00:25:08 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/W...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 00:30:46 Error: [MissingActionException] Action ArenasController::s() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 's',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/s
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-27 00:49:12 Error: [MissingActionException] Action ArenasController::s() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 's',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/s
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-09-27 00:58:57 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 44]
+2015-09-27 00:58:57 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/W...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/W...', 44, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 01:05:38 Error: Fatal Error (1): Call to a member function doMove() on a non-object in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 45]
+2015-09-27 01:05:38 Error: [FatalErrorException] Call to a member function doMove() on a non-object
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/W...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/W...', 45, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/W...', 45, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 01:16:18 Error: Fatal Error (1): Call to undefined function ajouter() in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 43]
+2015-09-27 01:16:18 Error: [FatalErrorException] Call to undefined function ajouter()
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/W...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 01:26:47 Error: Fatal Error (1): Call to undefined function ajouter() in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 43]
+2015-09-27 01:26:47 Error: [FatalErrorException] Call to undefined function ajouter()
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/W...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 01:26:48 Error: Fatal Error (1): Call to undefined function ajouter() in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 43]
+2015-09-27 01:26:48 Error: [FatalErrorException] Call to undefined function ajouter()
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/W...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 01:26:51 Error: Fatal Error (1): Call to undefined function ajouter() in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 43]
+2015-09-27 01:26:51 Error: [FatalErrorException] Call to undefined function ajouter()
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/W...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/W...', 43, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 15:42:49 Error: Fatal Error (64): Cannot redeclare Fighter::createCharacter() in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 139]
+2015-09-27 15:42:49 Error: [FatalErrorException] Cannot redeclare Fighter::createCharacter()
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/var/www/html/W...', 139)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/var/www/html/W...', 139, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/var/www/html/W...', 139, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 15:43:29 Error: Fatal Error (1): Trait 'Cake\ORM\TableRegistry' not found in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 7]
+2015-09-27 15:43:29 Error: [FatalErrorException] Trait 'Cake\ORM\TableRegistry' not found
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Trait 'Cake\ORM...', '/var/www/html/W...', 7)
+#1 [internal function]: ErrorHandler::handleError(1, 'Trait 'Cake\ORM...', '/var/www/html/W...', 7, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Trait 'Cake\ORM...', '/var/www/html/W...', 7, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-27 18:52:44 Error: Fatal Error (4): syntax error, unexpected '}' in [/var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php, line 59]
+2015-09-27 18:52:44 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/W...', 59)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/W...', 59, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/W...', 59, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-02 21:21:53 Error: [MissingControllerException] Controller class ApisController could not be found.
+Exception Attributes: array (
+  'class' => 'ApisController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/fighterview
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-02 21:22:07 Error: [MissingControllerException] Controller class ApisController could not be found.
+Exception Attributes: array (
+  'class' => 'ApisController',
+  'plugin' => NULL,
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/fighterview
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-02 23:34:46 Error: [MissingActionException] Action ApisController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApisController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:36:05 Error: [MissingActionException] Action ApisController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApisController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:36:25 Error: [MissingActionException] Action ApisController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApisController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:37:39 Error: [MissingActionException] Action ApisController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApisController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:37:44 Error: [MissingActionException] Action ApisController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApisController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:38:07 Error: [MissingActionException] Action ApisController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApisController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:38:09 Error: [MissingActionException] Action ApisController::sight() could not be found.
+Exception Attributes: array (
+  'controller' => 'ApisController',
+  'action' => 'sight',
+)
+Request URL: /WebArenaGoupSIA-00-00/Apis/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ApisController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:38:38 Error: [MissingActionException] Action ArenasController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:38:48 Error: [MissingActionException] Action ArenasController::Accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'Accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/Accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:39:10 Error: [MissingActionException] Action ArenasController::Accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'Accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/Accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:39:12 Error: [MissingActionException] Action ArenasController::sight.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'sight.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:39:22 Error: [MissingActionException] Action ArenasController::sight.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'sight.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:39:26 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:39:31 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:43:24 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:47:56 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:49:12 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:50:31 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:50:32 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:50:32 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:50:33 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:50:33 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:50:33 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:51:06 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:51:29 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:51:38 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:51:52 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:54:24 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:54:42 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:54:55 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:55:03 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:55:43 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:55:55 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:56:18 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:56:40 Error: [MissingActionException] Action ArenasController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:56:48 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:57:55 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:58:11 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:58:20 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-02 23:59:42 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:00:56 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:01:09 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:01:16 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:01:26 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:02:21 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:04:51 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:06:44 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:07:21 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:07:23 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:07:28 Error: [MissingActionException] Action ArenasController::sight.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'sight.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:07:32 Error: [MissingActionException] Action ArenasController::sight.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'sight.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:07:43 Error: [MissingActionException] Action ArenasController::sight.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'sight.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:07:45 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 00:14:30 Error: [MissingActionException] Action ArenasController::accueil.php() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil.php',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil.php
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 11:32:21 Error: Fatal Error (1): Class 'Position' not found in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 20]
+2015-10-03 11:32:21 Error: [FatalErrorException] Class 'Position' not found
+Request URL: /WebArenaGoupSIA-00-00/Arenas/fighter
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'Position...', '/var/www/html/W...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Position...', '/var/www/html/W...', 20, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'Position...', '/var/www/html/W...', 20, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-03 11:32:37 Error: Fatal Error (1): Class 'Position' not found in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 20]
+2015-10-03 11:32:37 Error: [FatalErrorException] Class 'Position' not found
+Request URL: /WebArenaGoupSIA-00-00/Arenas/fighter
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'Position...', '/var/www/html/W...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Position...', '/var/www/html/W...', 20, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'Position...', '/var/www/html/W...', 20, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-03 15:14:07 Error: [MissingActionException] Action ArenasController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 15:14:44 Error: [MissingActionException] Action ArenasController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-03 15:15:11 Error: Fatal Error (64): Access level to Fighter::$id must be public (as in class AppModel) in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 5]
+2015-10-03 15:15:11 Error: [FatalErrorException] Access level to Fighter::$id must be public (as in class AppModel)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Access level to...', '/var/www/html/W...', 5)
+#1 [internal function]: ErrorHandler::handleError(64, 'Access level to...', '/var/www/html/W...', 5, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 64, 'Access level to...', '/var/www/html/W...', 5, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-04 00:07:51 Error: [MissingActionException] Action ArenasController::accueil() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArenasController',
+  'action' => 'accueil',
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/accueil
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#2 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-04 00:26:37 Error: Fatal Error (64): Access level to Fighter::$id must be public (as in class AppModel) in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 8]
+2015-10-04 00:26:37 Error: [FatalErrorException] Access level to Fighter::$id must be public (as in class AppModel)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Access level to...', '/var/www/html/W...', 8)
+#1 [internal function]: ErrorHandler::handleError(64, 'Access level to...', '/var/www/html/W...', 8, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 64, 'Access level to...', '/var/www/html/W...', 8, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-04 00:27:14 Error: Fatal Error (64): Access level to Fighter::$id must be public (as in class AppModel) in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 8]
+2015-10-04 00:27:14 Error: [FatalErrorException] Access level to Fighter::$id must be public (as in class AppModel)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Access level to...', '/var/www/html/W...', 8)
+#1 [internal function]: ErrorHandler::handleError(64, 'Access level to...', '/var/www/html/W...', 8, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 64, 'Access level to...', '/var/www/html/W...', 8, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-04 00:28:08 Error: Fatal Error (64): Access level to Fighter::$id must be public (as in class AppModel) in [/var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php, line 8]
+2015-10-04 00:28:08 Error: [FatalErrorException] Access level to Fighter::$id must be public (as in class AppModel)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Access level to...', '/var/www/html/W...', 8)
+#1 [internal function]: ErrorHandler::handleError(64, 'Access level to...', '/var/www/html/W...', 8, Array)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 64, 'Access level to...', '/var/www/html/W...', 8, Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-04 00:28:35 Error: [InvalidArgumentException] The eventKey variable is required
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(806): CakeEventManager->attach(NULL)
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(3075): Model->getEventManager()
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(2989): Model->buildQuery('all', Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php(24): Model->find('all', Array)
+#4 [internal function]: Fighter->__construct(Array)
+#5 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#6 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(741): ClassRegistry::init(Array)
+#7 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(367): Controller->loadModel('Fighter')
+#8 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(405): Controller->__isset('Fighter')
+#9 /var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php(49): Controller->__get('Fighter')
+#10 [internal function]: ArenasController->sight()
+#11 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ArenasController), Array)
+#12 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#14 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-10-04 00:40:57 Error: [InvalidArgumentException] The eventKey variable is required
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(806): CakeEventManager->attach(NULL)
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(3075): Model->getEventManager()
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(2989): Model->buildQuery('first', Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php(24): Model->find('first', Array)
+#4 [internal function]: Fighter->__construct(Array)
+#5 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#6 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(741): ClassRegistry::init(Array)
+#7 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(367): Controller->loadModel('Fighter')
+#8 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(405): Controller->__isset('Fighter')
+#9 /var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php(49): Controller->__get('Fighter')
+#10 [internal function]: ArenasController->sight()
+#11 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ArenasController), Array)
+#12 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#14 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-10-04 00:43:20 Error: [InvalidArgumentException] The eventKey variable is required
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(806): CakeEventManager->attach(NULL)
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(3075): Model->getEventManager()
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(2989): Model->buildQuery('first', Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php(24): Model->find('first', Array)
+#4 [internal function]: Fighter->__construct(Array)
+#5 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#6 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(741): ClassRegistry::init(Array)
+#7 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(367): Controller->loadModel('Fighter')
+#8 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(405): Controller->__isset('Fighter')
+#9 /var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php(49): Controller->__get('Fighter')
+#10 [internal function]: ArenasController->sight()
+#11 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ArenasController), Array)
+#12 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#14 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-10-04 01:05:33 Error: [MissingDatasourceConfigException] The datasource configuration "" was not found in database.php
+Exception Attributes: array (
+  'config' => false,
+)
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject(false)
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(3647): ConnectionManager::getDataSource(false)
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#3 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#4 /var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php(26): Model->find('first', Array)
+#5 [internal function]: Fighter->__construct(Array)
+#6 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#7 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(741): ClassRegistry::init(Array)
+#8 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(367): Controller->loadModel('Fighter')
+#9 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(405): Controller->__isset('Fighter')
+#10 /var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php(49): Controller->__get('Fighter')
+#11 [internal function]: ArenasController->sight()
+#12 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ArenasController), Array)
+#13 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#15 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-10-04 01:28:00 Error: [InvalidArgumentException] The eventKey variable is required
+Request URL: /WebArenaGoupSIA-00-00/Arenas/sight
+Stack Trace:
+#0 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(806): CakeEventManager->attach(NULL)
+#1 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(3075): Model->getEventManager()
+#2 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Model/Model.php(2989): Model->buildQuery('first', Array)
+#3 /var/www/html/WebArenaGoupSIA-00-00/app/Model/Fighter.php(25): Model->find('first', Array)
+#4 [internal function]: Fighter->__construct(Array)
+#5 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
+#6 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(741): ClassRegistry::init(Array)
+#7 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(367): Controller->loadModel('Fighter')
+#8 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(405): Controller->__isset('Fighter')
+#9 /var/www/html/WebArenaGoupSIA-00-00/app/Controller/ArenasController.php(49): Controller->__get('Fighter')
+#10 [internal function]: ArenasController->sight()
+#11 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ArenasController), Array)
+#12 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/html/WebArenaGoupSIA-00-00/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ArenasController), Object(CakeRequest))
+#14 /var/www/html/WebArenaGoupSIA-00-00/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}

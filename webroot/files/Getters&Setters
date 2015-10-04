@@ -1,0 +1,38 @@
+ /*Getters*/
+   public function getInformation($name){
+       
+   }
+   
+   public function getPosition($name){
+       
+   }
+   
+   public function getValueofView($name){
+       
+   }
+   
+   public function getValueofForce($name){
+       
+   }
+   
+   public function getLifePoints($name){
+       
+   }
+   
+   
+   /*Setters*/
+   public function setPosition($name,$x,$y){
+       
+   }
+   
+   public function setValueofView($name,$value_view){
+       
+   }
+   
+   public function setValueofForce($name,$value_force){
+       
+   }
+   
+   public function setLifePoints($name,$value_life_points){
+       
+   }
