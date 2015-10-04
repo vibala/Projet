@@ -61,7 +61,7 @@ class Fighter extends AppModel {
     
     public function checkThreshold($level_attaque,$level_attaquant){
         $threshold = (10 + $level_attaque) - $level_attaquant;
-        if(rand(1,20) > $threshold){
+        if(rand(0,20) > $threshold){
             return TRUE;
         }
             return FALSE;
