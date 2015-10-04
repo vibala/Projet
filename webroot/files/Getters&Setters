@@ -36,3 +36,60 @@
    public function setLifePoints($name,$value_life_points){
        
    }
+
+
+/*Constructeur*/    
+    //public function __construct($name, $id = false, $table = false, $ds = false) {
+        /*Equivalent de super(..) en java && en gros on appelle le constructeur de la classe père        
+        $data = $this->find('first',array('conditions' => array('Fighter.name' => $name)));
+    
+        $this->id = $data['Fighter']['id'];
+        $this->name = $name;
+        $this->coordinate_x = $data['Fighter']['coordinate_x'];
+        $this->coordinate_y = $data['Fighter']['coordinate_y'];
+        $this->level = $data['Fighter']['level'];
+        $this->xp = $data['Fighter']['xp'];
+        $this->skill_sight = $data['Fighter']['skill_sight'];
+        $this->skill_strength = $data['Fighter']['skill_strength'];;
+        $this->skill_health = $data['Fighter']['skill_health'];
+        $this->current_health = $data['Fighter']['current_health'];
+        $this->next_action_time = $data['Fighter']['next_action_time'];        
+        parent::__construct($id, $table, $ds);
+    }
+    */
+
+    /*Attributs de la classe*/
+    public $coordinate_x,$coordinate_y;    
+    public $skill_sight;
+    public $skill_strength;
+    public $skill_health;
+    public $current_health;
+    public $level;
+    public $xp;
+    public $id;
+    public $next_action_time;
+
+
+
+
+
+
+<article>
+            <h2>Attack Form</h2>
+            <?php
+                echo $this->Form->create('Fighterattack');
+                echo $this->Form->input('direction_attack',array('options' => array('north'=>'north','east'=>'east','south'=>'south','west'=>'west'), 'default' => 'east'));
+                echo $this->Form->end('Attack');
+            ?>
+         </article>
+
+
+
+        }else if(isset($var['Fighterattack']['direction_attack'])){            
+            $this->Fighter->doAttack(1, $var['Fighterattack']['direction_attack']); 
+            /*Message de notification*/
+            $this->Session->setFlash('L\'action doAttack a été réalisée.'); 
+            
+
+//renvoie le tuple correspondant à l'identifiant $fighterId dans la BD
+       //$data = $this->read(null,$fighterId);   
