@@ -1,0 +1,55 @@
+
+                
+                $('#choose').on('click',function(){
+                    $.post(
+                        // url
+                        '<?php
+                             echo Router::url(array('controller' => 'arenas', 'action' => 'ajaxProcessingVFLP'));                                                                                     
+                        ?>',                           
+                         
+                        {fighter_name: $('#Fighter_Name').val(),
+                         ennemy_name: $('#ennemies').text()},
+                    
+                        function(json){               
+                            $.each(json,function(i,item){
+                                alert(i +'=>' + item);                                
+                            });                                              
+                        },
+                    
+                        'json',
+                    );
+                    return false;
+            });
+
+
+
+
+$('#enter').on('click',function(){                    
+                       
+                    $('#hidden_name').val($('#Fighter_Name').val());
+        
+                    // ajout des handlers pour bien gérer les appels AJAX    
+                    $.post(                         
+                        // on se sert d'un helperHTML cakephp                                                     
+                        '<?php 
+                                // HtmlHelper::url(mixed $url = NULL, boolean $full = false) cd : cakephp doc                           
+                                // remarque : action ; on retrouve svt cet attribut à l'intérieur de la balise form et 
+                                // indique la page php qui se charge de récupérer les données et de les traiter                                                     
+                                echo Router::url(array('controller' => 'arenas', 'action' => 'ajaxProcessing'));                                                                                     
+
+                        ?>',                                    
+                        
+                        {fighter_name: $('#Fighter_Name').val()}, 
+                        
+                        function(json) {                                                        
+                            $.each(json,function(i,item){
+                                //alert(i +'=>' + item);
+                                $('#ennemies').append("<option>"+ item+ "</option>");                                
+                            });                                            
+                                                
+                      },                              
+                        'json'
+                    );
+                    return false;
+                }); 
+               

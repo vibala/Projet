@@ -27,7 +27,9 @@ class Fighter extends AppModel {
     /*Fonction pour vérifier si une attaque est réussie ou pas*/
     public function checkThreshold($level_attaque,$level_attaquant){
         $threshold = (10 + $level_attaque) - $level_attaquant;
-        if(rand(0,20) > $threshold){
+        $random_value = rand(0,20);
+        echo "random value : " . $random_value . " threshold : " . $threshold . " " ;
+        if($random_value > $threshold){
             return TRUE;
         }
             return FALSE;
@@ -41,6 +43,7 @@ class Fighter extends AppModel {
         $all_data = $this->find('all');
         //$fighter_data = $this->read(null,$fighterId);
         $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $name)));
+        //pr($fighter_data);        
         
         $ennemies = array();
         $ennemy_position_x = 0;
@@ -119,20 +122,20 @@ class Fighter extends AppModel {
         //Oui les var sont des tableaux            
        //faire la modif
        
-        if ($direction_move == 'north' && ($data['Fighter']['coordinate_y'] + 1) < Configure::read('Longueur')) {
+        if ($direction_move == 'north' && ($data['Fighter']['coordinate_x'] + 1) < Configure::read('Longueur')) {
             // Longueur est une var globale déclarée en haut de cette classe           
             $this->set('coordinate_y', $data['Fighter']['coordinate_y'] + 1);
         
             
-        } elseif ($direction_move == 'south' && ($data['Fighter']['coordinate_y'] - 1) >= 0) {
+        } elseif ($direction_move == 'south' && ($data['Fighter']['coordinate_x'] - 1) >= 0) {
             $this->set('coordinate_y', $data['Fighter']['coordinate_y'] - 1);
         
             
-        } elseif ($direction_move == 'east' && ($data['Fighter']['coordinate_x'] + 1) < Configure::read('Largeur')) {
+        } elseif ($direction_move == 'east' && ($data['Fighter']['coordinate_y'] + 1) < Configure::read('Largeur')) {
             $this->set('coordinate_x', $data['Fighter']['coordinate_x'] + 1);
         
             
-        } elseif ($direction_move == 'west' && ($data['Fighter']['coordinate_x'] - 1) >= 0) {
+        } elseif ($direction_move == 'west' && ($data['Fighter']['coordinate_y'] - 1) >= 0) {
             $this->set('coordinate_x', $data['Fighter']['coordinate_x'] - 1);
         
             
@@ -146,10 +149,10 @@ class Fighter extends AppModel {
    }
    
    /*Cette fonction permet d'exécuter les conséquences d'une attaque réussie du fighter*/
-   public function excuteAttack($fighterName,$ennemyName){
+   public function executeAttack($fighterName,$ennemyName){
        
        //renvoie le tuple correspondant au nom $fighterName dans la BD
-       $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $fighterName)));
+       $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $fighterName)));       
        
        // renvoie le tuple correspondant au nom $ennemyName dans la BD
        $enemy_data = $this->find('first',array('conditions' => array('Fighter.name' => $ennemyName)));
@@ -157,8 +160,7 @@ class Fighter extends AppModel {
        // Tableau regroupant toutes les options utilisée comme variable de retour de cette fonction       
        $options_for_views = array();
        $options_for_force = array();
-       $options_for_life_points = array();
-       
+       $options_for_life_points = array();       
        
               
        // $this->set(field,value)
@@ -169,13 +171,15 @@ class Fighter extends AppModel {
        $this->set('current_health',$enemy_data['Fighter']['current_health'] - $fighter_data['Fighter']['skill_strength']);
           
        // Combattant gagne 1pt xp
-       $this->set('xp',$fighter_data['Fighter']['xp'] + 1);
+       $fighter_data['Fighter']['xp'] = ($fighter_data['Fighter']['xp'] + 1);
+       $this->set('xp',$fighter_data['Fighter']['xp']);
+       pr($fighter_data);
         
        // Si l'adversaire a un pt de vie = 0 ==> retirer du jeu et inviter l'user d'en recréer un nouveau
        if($enemy_data['Fighter']['current_health'] <= 0){
             $this->set('xp',$fighter_data['Fighter']['xp'] + $ennemi_previous_level);
              // retirer du jeu
-               
+             // a faire  
        }
            
         // tous les 4 points d'expériences, le combattant change de niveau 
@@ -189,7 +193,7 @@ class Fighter extends AppModel {
             $options_for_life_points[$i] = (3 * $i);
         }
            
-        $gathered_options = array('force_options' => $options_for_force, 'views_options' => $options_for_views,'life_points_options' => $options_for_life_points);
+        $gathered_options = array('attack' => 'success','nb_times' => $nb_times, 'force_options' => $options_for_force, 'views_options' => $options_for_views,'life_points_options' => $options_for_life_points);
        
        // Si l'attaque est réussie : 
        // - code pour executer ceci : La caractéristique de force détermine combien de point de vie perd son adversaire 
@@ -212,19 +216,19 @@ class Fighter extends AppModel {
        $direction  = array();     
        
        if(($enemy_data['Fighter']['coordinate_x'] - $fighter_data['Fighter']['coordinate_x']) > 0 && $enemy_data['Fighter']['coordinate_y'] == $fighter_data['Fighter']['coordinate_y']){
-           $direction[1] = 'east';
+           $direction[1] = 'north';
            $direction[2] = ($enemy_data['Fighter']['coordinate_x'] - $fighter_data['Fighter']['coordinate_x']);
            
        }else if(($enemy_data['Fighter']['coordinate_x'] - $fighter_data['Fighter']['coordinate_x']) < 0 && $enemy_data['Fighter']['coordinate_y'] == $fighter_data['Fighter']['coordinate_y']){
-           $direction[1] = 'west';
+           $direction[1] = 'south';
            $direction[2] = ($enemy_data['Fighter']['coordinate_x'] - $fighter_data['Fighter']['coordinate_x']);
            
-       }else if(($enemy_data['Fighter']['coordinate_y'] - $fighter_data['Fighter']['coordinate_y']) > 0 && $enemy_data['Fighter']['coordinate_x'] == $fighter_data['Fighter']['coordinate_x']){
-           $direction[1] = 'north';
+       }else if(($enemy_data['Fighter']['coordinate_y'] - $fighter_data['Fighter']['coordinate_y']) < 0 && $enemy_data['Fighter']['coordinate_x'] == $fighter_data['Fighter']['coordinate_x']){
+           $direction[1] = 'west';
            $direction[2] = ($enemy_data['Fighter']['coordinate_y'] - $fighter_data['Fighter']['coordinate_y']);
            
-       }else if(($enemy_data['Fighter']['coordinate_y'] - $fighter_data['Fighter']['coordinate_y']) < 0 && $enemy_data['Fighter']['coordinate_x'] == $fighter_data['Fighter']['coordinate_x']){
-           $direction[1] = 'south';
+       }else if(($enemy_data['Fighter']['coordinate_y'] - $fighter_data['Fighter']['coordinate_y']) > 0 && $enemy_data['Fighter']['coordinate_x'] == $fighter_data['Fighter']['coordinate_x']){
+           $direction[1] = 'east';
            $direction[2] = ($enemy_data['Fighter']['coordinate_y'] - $fighter_data['Fighter']['coordinate_y']);
        }
         
@@ -241,27 +245,24 @@ class Fighter extends AppModel {
        if($this->checkThreshold($enemy_data['Fighter']['level'],$fighter_data['Fighter']['level']) == TRUE){
            
             // Fonction pour récupérer la direction choisie par le combattant pour défier son adversaire
-            $tab = $this->getDirection($fighterName, $enemyName);
-            $direction_attack = $tab[1];
-            $nb_steps = $tab[2];
-                    
+            //$tab = $this->getDirection($fighterName, $enemyName);
+            //$direction_attack = $tab[1];
+            //$nb_steps = $tab[2];
+            //pr($tab);
             /*Conditions pour vérifier si on ne sort pas de l'arène*/
-            if ($direction_attack == 'north') {
-             // Longueur est une var globale déclaré en haut de cette classe
-                 $this->set('coordinate_y', $fighter_data['Fighter']['coordinate_y'] + $nb_steps);
-                 $options = $this->excuteAttack($fighterName,$enemyName);
-            } elseif ($direction_attack == 'south') {
-                 $this->set('coordinate_y', $fighter_data['Fighter']['coordinate_y'] - $nb_steps);
-                  $options = $this->excuteAttack($fighterName,$enemyName);
-            } elseif ($direction_attack == 'east') {
-                 $this->set('coordinate_x', $fighter_data['Fighter']['coordinate_x'] + $nb_steps);
-                  $options = $this->excuteAttack($fighterName,$enemyName);
-            } elseif ($direction_attack == 'west'){
-                 $this->set('coordinate_x', $fighter_data['Fighter']['coordinate_x'] - $nb_steps);
-                  $options = $this->excuteAttack($fighterName,$enemyName);
-            } else {
-                 return NULL;
-            }  
+            //if (($direction_attack == 'north') or  ($direction_attack == 'south') or ($direction_attack == 'east')or ($direction_attack == 'west')) {                          
+            $options = $this->executeAttack($fighterName,$enemyName);            
+            //}
+             
+                 /*
+            } elseif (($direction_attack == 'east')or ($direction_attack == 'west')) {
+                  $this->set('coordinate_y', $fighter_data['Fighter']['coordinate_y'] + $nb_steps);
+                  $options = $this->executeAttack($fighterName,$enemyName);            
+            }*/
+            
+              
+       }else{
+            return array('attack' => 'failed');
        }
 
        
