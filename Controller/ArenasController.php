@@ -84,12 +84,11 @@ class ArenasController extends AppController
      // Cas des requêtes AJAX
         $i = 0;
         if ( $this->request->is( 'ajax' ) ) {            
-            $var = $this->request->data;  
+            $var = $this->capterFormulaire();  
             $ret = array(); // variable de retour
            
             // On récupère la liste des adversaires à partir du nom de combattant         
-            $ennemies = $this->Fighter->trackEnnemy($var['fighter_name']);
- 
+            $ennemies = $this->Fighter->trackEnnemy($var['fighter_name']);            
           // Stockage des données à renvoyer à la vue dans un tableau
          if ( $ennemies ){
                 foreach($ennemies as $value){
@@ -116,12 +115,11 @@ class ArenasController extends AppController
         
         $i = 0; // compteur
         if ( $this->request->is( 'ajax' ) ) {            
-            $var = $this->request->data;  
+            $var = $this->capterFormulaire();
             $ret = array(); // variable de retour
-           
+            
             // On récupère la liste des adversaires à partir du nom de combattant                     
-            $tmp_for_options = $this->Fighter->doAttack($var['fighter_name'],$var['ennemy_name']);            
-            pr($tmp_for_options);
+            $tmp_for_options = $this->Fighter->doAttack($var['fighter_name'],$var['ennemy_name']);                        
             if($tmp_for_options['attack'] == 'success'){
                 $this->Session->setFlash("L'attaque est réussie");
             }else{
@@ -160,7 +158,7 @@ class ArenasController extends AppController
     public function capterFormulaire(){
         
         if ($this->request->is('get')){                        
-            pr($this->request->query); //  print_r sert à afficher des infos à propos de la variable       
+            //pr($this->request->query); //  print_r sert à afficher des infos à propos de la variable       
             return $this->request->query;
         }else if($this->request->is('post')){
             return $this->request->data; // pour le chargement des avatars

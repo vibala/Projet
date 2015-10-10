@@ -43,7 +43,9 @@ class Fighter extends AppModel {
         $all_data = $this->find('all');
         //$fighter_data = $this->read(null,$fighterId);
         $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $name)));
-        //pr($fighter_data);        
+        
+        //pr($all_data);        
+        //pr($fighter_data);
         
         $ennemies = array();
         $ennemy_position_x = 0;
@@ -87,8 +89,7 @@ class Fighter extends AppModel {
                     if($position_y - $j == $ennemy_position_y  && $position_x == $ennemy_position_x){
                         //echo $all_data[$i]['Fighter']['name'];
                         $ennemies[$all_data[$i]['Fighter']['id']] = $all_data[$i]['Fighter']['name'];
-                    }
-                    
+                    }                    
                 }
                 
                 if($position_y - $j >= 0){
@@ -151,11 +152,14 @@ class Fighter extends AppModel {
    /*Cette fonction permet d'exécuter les conséquences d'une attaque réussie du fighter*/
    public function executeAttack($fighterName,$ennemyName){
        
+       // utilisez find uniquement pour lire les données ; en cas de modification des données utilisez read
        //renvoie le tuple correspondant au nom $fighterName dans la BD
        $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $fighterName)));       
        
+       
        // renvoie le tuple correspondant au nom $ennemyName dans la BD
        $enemy_data = $this->find('first',array('conditions' => array('Fighter.name' => $ennemyName)));
+       
        
        // Tableau regroupant toutes les options utilisée comme variable de retour de cette fonction       
        $options_for_views = array();
@@ -168,24 +172,40 @@ class Fighter extends AppModel {
        // quand le combattant réussit son action d'attaque.           
        $fighter_previous_xp = $fighter_data['Fighter']['xp']; // stockage du niveau d'expérience du fighter avant la modif
        $ennemi_previous_level = $enemy_data['Fighter']['level']; // stockage du niveau de l'ennemi avant la modif
-       $this->set('current_health',$enemy_data['Fighter']['current_health'] - $fighter_data['Fighter']['skill_strength']);
+       
+       
+        $this->updateAll(
+               array('current_health' => ($enemy_data['Fighter']['current_health'] - $fighter_data['Fighter']['skill_strength'])),
+               array('name' => $enemy_data['Fighter']['name'])
+        );       
           
-       // Combattant gagne 1pt xp
-       $fighter_data['Fighter']['xp'] = ($fighter_data['Fighter']['xp'] + 1);
-       $this->set('xp',$fighter_data['Fighter']['xp']);
-       pr($fighter_data);
+       // Combattant gagne 1pt xp              
+       // Pas de set car comme je devais modifier à la fois les données du comb et de l'ennemi et donc 
+       // j'avais crée deux read sauf que $set ne comprenait pas lequel des deux read j'utilisais
+       $this->updateAll(
+               array('xp' => $fighter_data['Fighter']['xp'] + 1),
+               array('name' => $fighter_data['Fighter']['name'])
+       );
+       
         
        // Si l'adversaire a un pt de vie = 0 ==> retirer du jeu et inviter l'user d'en recréer un nouveau
        if($enemy_data['Fighter']['current_health'] <= 0){
-            $this->set('xp',$fighter_data['Fighter']['xp'] + $ennemi_previous_level);
+           
+            $this->updateAll(
+               array('xp' => ($fighter_data['Fighter']['xp'] + $ennemi_previous_level)),
+               array('name' => $fighter_data['Fighter']['name'])
+            );
              // retirer du jeu
              // a faire  
        }
            
         // tous les 4 points d'expériences, le combattant change de niveau 
-        $nb_times = (($fighter_data['Fighter']['xp'] / 4) - ($fighter_previous_xp / 4));
-        $fighter_data['Fighter']['level'] += (($fighter_data['Fighter']['xp'] / 4) - ($fighter_previous_xp / 4));
-           
+        $nb_times = (($fighter_data['Fighter']['xp'] - $fighter_previous_xp) / 4);
+        $this->updateAll(
+               array('level' => ($nb_times)),
+               array('name' => $fighter_data['Fighter']['name'])
+        );
+        
         // peut choisir d'augmenter une de ses caractéristiques:  vue +1 ou  force+1 ou point de vie+3
         for($i = 1; $i <= $nb_times; $i++){
             $options_for_force[$i] = $i;                  
@@ -239,30 +259,15 @@ class Fighter extends AppModel {
        
        // Renvoie le tuple correspondant au nom $fighterName dans la BD
        $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $fighterName)));
-       $enemy_data = $this->find('first',array('conditions' => array('Fighter.name' => $enemyName)));
+       $enemy_data = $this->find('first',array('conditions' => array('Fighter.name' => $enemyName)));       
        
        // Tester si l'attaque est bien réussie
-       if($this->checkThreshold($enemy_data['Fighter']['level'],$fighter_data['Fighter']['level']) == TRUE){
-           
-            // Fonction pour récupérer la direction choisie par le combattant pour défier son adversaire
-            //$tab = $this->getDirection($fighterName, $enemyName);
-            //$direction_attack = $tab[1];
-            //$nb_steps = $tab[2];
-            //pr($tab);
-            /*Conditions pour vérifier si on ne sort pas de l'arène*/
-            //if (($direction_attack == 'north') or  ($direction_attack == 'south') or ($direction_attack == 'east')or ($direction_attack == 'west')) {                          
-            $options = $this->executeAttack($fighterName,$enemyName);            
-            //}
-             
-                 /*
-            } elseif (($direction_attack == 'east')or ($direction_attack == 'west')) {
-                  $this->set('coordinate_y', $fighter_data['Fighter']['coordinate_y'] + $nb_steps);
-                  $options = $this->executeAttack($fighterName,$enemyName);            
-            }*/
-            
+       if($this->checkThreshold($enemy_data['Fighter']['level'],$fighter_data['Fighter']['level']) == TRUE){  
+           $options = $this->executeAttack($fighterName,$enemyName);                        
               
        }else{
-            return array('attack' => 'failed');
+            
+           return array('attack' => 'failed');
        }
 
        
