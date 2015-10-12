@@ -1,3 +1,48 @@
+console.log("Liste d'objet %o", json);
+                            if(json['nb_times'] > 1){
+                                $.each(json,function(i,item){
+                                    console.log(i +'=>' + item);
+                                });
+
+                                $.each(json['views_options'],function(i,item){                                
+                                    $("number_of_views").append("<option>" + item +"</option>");                                 
+                                });
+
+                                $.each(json['force_options'],function(i,item){
+                                    $("value_of_force").append("<option>" + item +"</option>");                                 
+                                });
+
+                                $.each(json['life_points_options'],function(i,item){
+                                    $("number_of_life_points").append("<option>" + item +"</option>");                                 
+                                });
+                            }else if(json['nb_times'] === 1){
+                                   $("number_of_views").append("<option>" + json['force_options']['option1'] +"</option>");     
+                                   $("value_of_force").append("<option>" +  json['views_options']['option1'] +"</option>");
+                                   $("number_of_life_points").append("<option>" + json['life_points_options']['option1'] +"</option>");    
+                            }
+
+
+  alert(json['attack']);
+                                alert(json['nb_times']);                          
+                                alert(view['option1']);
+
+
+<form>
+                <fieldset>
+                    <legend> Choose your different options : </legend>
+                    <p> <select id="number_of_views"> </select> </p>
+                    <p> <select id="value_of_force"> </select> </p>
+                    <p> <select id="number_of_life_points"> </select> </p>
+                    <p> <input type="submit" id="validate" value="Validate" /> </p>
+                </fieldset>
+            </form>
+            <p id="rules_options"> Info : Si v </p>
+
+
+
+
+
+*******************************************************
 <?php
 
 App::uses('AppModel', 'Model');
@@ -35,11 +80,12 @@ class Fighter extends AppModel {
     }
     
     
-    /*Fonction permettant de chercher les adversaires qui se trouvent à la portée de la vue du combattant dont l'id est passé en paramètre*/
+    /*Fonction pour chercher les adversaires qui se trouvent à la portée de la vue du combattant dont l'id est passé en paramètre*/
     public function trackEnnemy($name){
         
         /*Recupérer toute les données de la table*/
-        $all_data = $this->find('all');        
+        $all_data = $this->find('all');
+        //$fighter_data = $this->read(null,$fighterId);
         $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $name)));        
     
         $ennemies = array();
@@ -155,6 +201,12 @@ class Fighter extends AppModel {
        // renvoie le tuple correspondant au nom $ennemyName dans la BD
        $enemy_data = $this->find('first',array('conditions' => array('Fighter.name' => $ennemyName)));
        
+       
+       // Tableau regroupant toutes les options utilisée comme variable de retour de cette fonction       
+       $options_for_views = array();
+       $options_for_force = array();
+       $options_for_life_points = array();       
+       
               
        // $this->set(field,value)       
        $fighter_previous_xp = $fighter_data['Fighter']['xp']; // stockage du niveau d'expérience du fighter avant la modif
@@ -195,7 +247,15 @@ class Fighter extends AppModel {
                array('name' =>   $fighter_data['Fighter']['name'])
         );
         
-        $gathered_options = array('attack' => 'success','nb_times' => $nb_times);
+        // peut choisir d'augmenter une de ses caractéristiques:  vue +1 ou  force+1 ou point de vie+3
+        for($i = 1; $i <= $nb_times; $i++){
+            $option = "option" . $i;
+            $options_for_force[$option] = $i;                  
+            $options_for_views[$option] = $i;           
+            $options_for_life_points[$option] = (3 * $i);           
+        }
+        
+        $gathered_options = array('attack' => 'success','nb_times' => $nb_times, 'force_options' => $options_for_force, 'views_options' => $options_for_views,'life_points_options' => $options_for_life_points);
        
        // Si l'attaque est réussie : 
        // - code pour executer ceci : La caractéristique de force détermine combien de point de vie perd son adversaire 
@@ -244,11 +304,11 @@ class Fighter extends AppModel {
        $enemy_data = $this->find('first',array('conditions' => array('Fighter.name' => $enemyName)));       
        
        // Tester si l'attaque est bien réussie
-       if($this->checkThreshold($enemy_data['Fighter']['level'],$fighter_data['Fighter']['level']) == TRUE){  
+       //if($this->checkThreshold($enemy_data['Fighter']['level'],$fighter_data['Fighter']['level']) == TRUE){  
            $options = $this->executeAttack($fighterName,$enemyName);           
-       }else{            
-           return array('attack' => 'failed');
-       }
+       //}else{            
+         //  return array('attack' => 'failed');
+       //}
 
        
         //sauvegarder la modification
@@ -319,31 +379,37 @@ class Fighter extends AppModel {
        move_uploaded_file($avatar_image, WWW_ROOT . DS . 'img' . DS . $filename);
    }
    
-   public function executeOptions($name,$option_lp,$option_forces,$option_views){
-       
-       // Recupère le combattant
-       $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $name)));        
-       $this->updateAll(
-               array('current_health' => ($fighter_data['Fighter']['current_health'] + $option_lp)),
-               array('name' => $fighter_data['Fighter']['name'])
-       ); 
-       
-       $this->updateAll(
-               array('skill_sight' => ($fighter_data['Fighter']['skill_sight'] + $option_views)),
-               array('name' => $fighter_data['Fighter']['name'])
-       ); 
-       
-       $this->updateAll(
-               array('skill_strength'=> ($fighter_data['Fighter']['skill_strength'] + $option_forces)),
-               array('name' => $fighter_data['Fighter']['name'])
-       );
-       
-       $returned_var = array('current_health' => ($fighter_data['Fighter']['current_health'] + $option_lp),'skill_sight' => ($fighter_data['Fighter']['skill_sight'] + $option_views), 'skill_strength' => ($fighter_data['Fighter']['skill_strength'] +  $option_forces));
-
-       return $returned_var;
-   }
+  
    
 }
       
     
 ?>
+
+
+*****************************************************
+
+$( "#slider_forces" ).slider({
+                                    value:1,
+                                    min: 0,
+                                    max: json['nb_times'],
+                                    step: 1,
+                                    slide: function( event, ui ) {
+                                            $( "#nb_forces" ).val( "$" + ui.value );
+                                        }
+                                });
+            
+                                $( "#nb_forces" ).val( "$" + $( "#slider_forces" ).slider( "value" ) );
+                                
+                                
+                                $( "#slider_life_points" ).slider({
+                                    value:3,
+                                    min: 0,
+                                    max: (3*json['nb_times']),
+                                    step: 3,
+                                    slide: function( event, ui ) {
+                                            $( "#nb_life_points" ).val( "$" + ui.value );
+                                        }
+                                });
+            
+                                $( "#nb_life_points" ).val( "$" + $( "#slider_view" ).slider( "value" ) ); 
