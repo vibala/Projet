@@ -105,7 +105,7 @@ class Fighter extends AppModel {
     }
    
    /*
-    * Fonction doMove prenant deux arguments
+    * Fonction doMove prenant deux arguments permet aux personnages de se déplacer dans l'arène
     * @todo écrire du code pour empecher de sortir des limites de l’arène
     * @todo écrire du code pour empecher d'entrer sur une case occupée.
     */
@@ -157,16 +157,17 @@ class Fighter extends AppModel {
        
               
        // $this->set(field,value)       
+       /*Variables utilisées dans le calcul des valeurs de forces, d'expérience et du nombre de vie*/
        $fighter_previous_xp = $fighter_data['Fighter']['xp']; // stockage du niveau d'expérience du fighter avant la modif
        $ennemi_previous_level = $enemy_data['Fighter']['level']; // stockage du niveau de l'ennemi avant la modif
-       $ennemi_current_health = $enemy_data['Fighter']['current_health'];
+       $ennemi_current_health = $enemy_data['Fighter']['current_health']; // stockage du nombre de vie actuel de l'adversaires
        
         // MAJ du nombre de vies de l'ennemi
         $this->updateAll(
                array('current_health' => ($enemy_data['Fighter']['current_health'] - $fighter_data['Fighter']['skill_strength'])),
                array('name' => $enemy_data['Fighter']['name'])
         );       
-        $ennemi_current_health -=  $fighter_data['Fighter']['skill_strength'];
+        $ennemi_current_health -=  $fighter_data['Fighter']['skill_strength']; // 
           
        // Combattant gagne 1pt xp              
        // Pas de set car comme je devais modifier à la fois les données du comb et de l'ennemi et donc 
@@ -184,6 +185,8 @@ class Fighter extends AppModel {
                array('xp' => ($fighter_data['Fighter']['xp'] + $ennemi_previous_level)),
                array('name' => $fighter_data['Fighter']['name'])
             );
+            //La caractéristique de force détermine combien de point de vie perd son adversaire 
+            // quand le combattant réussit son action d'attaque.
             $fighter_current_xp = ($fighter_data['Fighter']['xp'] + $ennemi_previous_level);
             //$this->delete($enemy_data['Fighter']['id']); // supprime le tuple             
        }
@@ -195,6 +198,9 @@ class Fighter extends AppModel {
                array('name' =>   $fighter_data['Fighter']['name'])
         );
         
+        // on regroupe ds la variable $gathered_options deux variables que sont 'attack' (var booléen pour dire
+        // si l'attaque a été réussie ou non) et une autre variables 'nb_times' pour indiquer combien de fois 
+        // le combattant a gagné une série de 4 points d'expérience
         $gathered_options = array('attack' => 'success','nb_times' => $nb_times);
        
        // Si l'attaque est réussie : 
@@ -236,7 +242,8 @@ class Fighter extends AppModel {
         
             return $direction;
    }   
-   
+   /*Fonction appelée lorsqu'on choisit l'adversaire ds le formulaire */
+   /* C'est cette fonction qui gère la démarche d'attaque */
    public function doAttack($fighterName,$enemyName){     
        
        // Renvoie le tuple correspondant au nom $fighterName dans la BD
@@ -245,9 +252,10 @@ class Fighter extends AppModel {
        
        // Tester si l'attaque est bien réussie
        if($this->checkThreshold($enemy_data['Fighter']['level'],$fighter_data['Fighter']['level']) == TRUE){  
+           // Stockage le résultat de l'appel executeAttack
            $options = $this->executeAttack($fighterName,$enemyName);           
        }else{            
-           return array('attack' => 'failed');
+         //  return array('attack' => 'failed');
        }
 
        
@@ -256,6 +264,7 @@ class Fighter extends AppModel {
         return  $options;
    }   
    
+   /*Fonction permettant de faire passer à un autre niveau*/
    public function moveTothenextLevel($fighterId,$next_level){
        
        $data = $this->read(null,$fighterId);       
@@ -286,23 +295,46 @@ class Fighter extends AppModel {
         return true;       
    }
 
-   
+   /*Fonction pour créer un combattant*/
    public function createCharacter($character_name,$player_id){
        
        /*On t'impose de commencer par create*/
        $this->create();
+       $coordinate_x_all_fighters = $this->find('all',array('fields' => array('Fighter.coordinate_x')));
+       $coordinate_y_all_fighters = $this->find('all',array('fields' => array('Fighter.coordinate_y')));
+       
+       $validate = FALSE; // initialisation      
+       $x = 0; $y = 0; // initialisation
+       
+       
+       while($validate == FALSE){
+           $flag = 1;           
+           $x = rand(0,14);
+           $y = rand(0,9);
+           
+           for($i = 0; $i < count($coordinate_x_all_fighters); $i++){
+                if($coordinate_x_all_fighters[$i]['Fighter']['coordinate_x'] == $x AND $coordinate_y_all_fighters[$i]['Fighter']['coordinate_y'] == $y){
+                    $flag = 0;
+                }
+           }
+           
+           if($flag == 1){
+               $validate = TRUE;
+           }
+       }
+       
        $data = 
                array(
                    "Fighter" => array(
                        "name" => $character_name,
                        "player_id" => $player_id,
-                       "coordinate_x" => rand(0,14),
-                       "coordinate_y" => rand(0,9),
+                       "coordinate_x" => $x,
+                       "coordinate_y" => $y,
                        "level" => 0,
-                       "xp" => 10,
+                       "xp" => 0,
                        "skill_sight" => 0,
                        "skill_strength" => 1,
-                       "health" => 3,
+                       "skill_health" => 10,
                        "current_health" => 3,
                        "next_action_time" => "0000-00-00 00:00:00",
                        "guild_id" => NULL
@@ -314,19 +346,34 @@ class Fighter extends AppModel {
        
    }
    
+   /*Fonction pour charger l'image de l'avatar du joueur*/
    public function uploadAvatarImage($avatar_name,$avatar_identifier,$avatar_image){       
        $filename = $avatar_name . $avatar_identifier . '.png';
        move_uploaded_file($avatar_image, WWW_ROOT . DS . 'img' . DS . $filename);
    }
    
-   public function executeOptions($name,$option_lp,$option_forces,$option_views){
+    /*Fonction appelée pour appliquer les options selectionnées ds le formulaire par le joueur lorsque son combattant
+    passe la barre des 4 points d'expériences    */
+    public function executeOptions($name,$option_lp,$option_forces,$option_views){
        
        // Recupère le combattant
-       $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $name)));        
-       $this->updateAll(
+       $fighter_data = $this->find('first',array('conditions' => array('Fighter.name' => $name)));     
+       // On récupère le nombre de vies actuel et le nombre maximal de vies
+       $max_health = $fighter_data['Fighter']['skill_health'];
+       $current_health = $fighter_data['Fighter']['current_health'];
+       
+       if($current_health + $option_lp >= $max_health){
+           $this->updateAll(
+               array('current_health' => $max_health),
+               array('name' => $fighter_data['Fighter']['name'])
+            );
+       }else{
+            $this->updateAll(
                array('current_health' => ($fighter_data['Fighter']['current_health'] + $option_lp)),
                array('name' => $fighter_data['Fighter']['name'])
-       ); 
+            );
+       }
+        
        
        $this->updateAll(
                array('skill_sight' => ($fighter_data['Fighter']['skill_sight'] + $option_views)),
@@ -343,7 +390,28 @@ class Fighter extends AppModel {
        return $returned_var;
    }
    
-}
-      
+    // ON Récupére les noms de tous les combattants
+    public function getFightersName(){
+        $fightersname = $this->find('all',array('fields' => array('Fighter.name')));
+        return $fightersname;
+    }   
+   
+    // ON Récupére le nombre de vie actuel de tous les combattants
+    public function getCurrentHealthFromFighter(){
+        $fighters_ch = $this->find('all',array('fields' => array('Fighter.current_health')));
+        return $fighters_ch;                
+    }
     
+    // ON Récupére l'expérience de chaque combattant   
+    public function getXPFromFighter(){
+        $fighters_xp = $this->find('all',array('fields' => array('Fighter.xp')));
+        return $fighters_xp;                
+    }
+    
+    // ON Récupère la portée de vue de chaque combattant
+    public function getSkillSightFromFighter(){
+        $fighters_ss = $this->find('all',array('fields' => array('Fighter.skill_sight')));
+        return $fighters_ss;                
+    }
+}
 ?>

@@ -13,8 +13,53 @@ class ArenasController extends AppController {
     /* Notre controller ArenasController proposera un accès à son model via $this->Event (par exemple) */
     public $uses = array('Player', 'Fighter', 'Event', 'Arena');
     // on sélectionne le moteur js
-    public $helpers = array('Js' => array('Jquery'));
+    public $helpers = array('Js' => array('Jquery'), 'Html');
 
+    
+    public function accueil(){
+        $this->set('accueil','Ceci est un message d\'accueil');
+    }
+    
+    public function connexion(){
+        $this->set('connexion','Une page «Connexion». Elle devra offrir les actions (formulaires) suivantes: s\'inscrire, se connecter, récupérer son mot de passe');        
+    }
+    
+    public function hall_of_fame(){
+        
+       //$fighters_xp;
+       //$fighter_skill_sight;
+    }
+    
+    public function hall_of_fame_ajax_processing(){
+        // Récupération des valeurs de chaque caractéristique des combattants
+        $fightersname = $this->Fighter->getFightersName();
+        $fighters_current_health = $this->Fighter->getCurrentHealthFromFighter();
+        $fighters_skill_sight = $this->Fighter->getSkillSightFromFighter();
+        $fighters_xp = $this->Fighter->getXPFromFighter();
+        $data = array(
+          'names' => $fightersname,
+          'current_healths' => $fighters_current_health,
+          'skill_sights'  => $fighters_skill_sight,
+          'experiences' => $fighters_xp
+        );
+        
+        
+        // On encode au format JSON et on affiche directement ce résultat (pour le récupérer dans la vue)
+        echo json_encode($data);
+        
+        exit();
+    }
+    public function news(){
+        $this->set('journal','Une page «Journal». Elle devra offrir les actions (formulaires) suivantes: s\'inscrire, se connecter, récupérer son mot de passe');
+    }
+    
+    public function forum(){
+        
+    }
+    
+    public function contact(){
+        
+    }
     /**
      * index method : first page
      *
@@ -38,7 +83,8 @@ class ArenasController extends AppController {
         // $fighter = new Fighter();
         //echo "Vue = $fighter->vue, (X,Y) = ($fighter->Position->positionX(),$fighter->Position->positionY())";
     }
-
+    
+    
     public function sight() {
 
         $var = $this->capterFormulaire();
@@ -55,24 +101,22 @@ class ArenasController extends AppController {
         $this->set('options_lp', $tmp_for_options);
 
 
-        if (isset($var['direction_move'])) {
-            $this->Fighter->doMove(1, $var['direction_move']);
+        if (isset($var['data']['direction_move'])) {
+            $this->Fighter->doMove(1, $var['data']['direction_move']);
 
             /* Message de notification */
             $this->Session->setFlash('L\'action domove a été réalisée.');
-        } else if (isset($var['next_level'])) {
-            $this->Fighter->moveTothenextLevel(1, $var['next_level']);
+        } else if (isset($var['data']['next_level'])) {
+            $this->Fighter->moveTothenextLevel(1, $var['data']['next_level']);
             /* Message de notification */
             $this->Session->setFlash('L\'action moveTothenextLevel a été réalisée.');
-        } else if (isset($var['character_name']) && isset($var['player_id'])) {
-            $this->Fighter->createCharacter($var['character_name'], $var['player_id']);
+        } else if (isset($var['data']['character_name']) && isset($var['data']['player_id'])) {
+            $this->Fighter->createCharacter($var['data']['character_name'], $var['data']['player_id']);
             /* Message de notification */
             $this->Session->setFlash('L\'action createCharacter a été réalisée.');
-        } else if (isset($var['Createyouravatar']['avatar_name']) && isset($var['Createyouravatar']['avatar_identifier']) && !empty($var['Createyouravatar']['avatar_image']['tmp_name']) && is_uploaded_file($var['Createyouravatar']['avatar_image']['tmp_name'])) {
-            $this->Fighter->uploadAvatarImage($var['Createyouravatar']['avatar_name'], $var['Createyouravatar']['avatar_identifier'], $var['Createyouravatar']['avatar_image']['tmp_name']);
-            /* Message de notification */
-            $this->Session->setFlash('L\'action uploadAvatarImage a été réalisée.');
-        }
+       }else if(isset($var['Createyouravatar']['avatar_name']) && isset($var['Createyouravatar']['avatar_identifier']) && !empty($var['Createyouravatar']['avatar_image']['tmp_name'])  && is_uploaded_file($var['Createyouravatar']['avatar_image']['tmp_name'])){
+            $this->Fighter->uploadAvatarImage($var['Createyouravatar']['avatar_name'],$var['Createyouravatar']['avatar_identifier'],$var['Createyouravatar']['avatar_image']['tmp_name']);
+       }
     }
 
     // Traitement de la requête AJAX (côté serveur, dans le contrôleur
@@ -105,6 +149,8 @@ class ArenasController extends AppController {
         }
     }
 
+    /*Fonction qui traite les données reçues par le formulaire*/
+    /*Fonction permettant de récupérer la liste des adversaires puis la renvoyer au formulaire*/
     public function ajaxProcessingVFLP() {
         
         if ($this->request->is('ajax')) {
@@ -130,6 +176,10 @@ class ArenasController extends AppController {
         }
     }
 
+    /*Fonction qui traite les données reçues par le formulaire*/
+    /*Fonction permettant de récupérer les options choisies par le joueur puis les passe au modèle qui va
+     exécuter les options. Le modèle renvoie ensuite les différentes valeurs qui ont été mises à jour à cette fonction
+     qui va à son tour les renvoyer à la vue     */
     public function ajaxFinishingVFLP(){
         
         if($this->request->is('ajax')){
@@ -146,10 +196,11 @@ class ArenasController extends AppController {
         $this->set('raw', $this->Event->find());
     }
 
+    /*Fonction chargée de vérifier si les données transmises en post ou en get*/
     public function capterFormulaire() {
 
         if ($this->request->is('get')) {
-            //pr($this->request->query); //  print_r sert à afficher des infos à propos de la variable       
+           // pr($this->request->query); //  print_r sert à afficher des infos à propos de la variable       
             return $this->request->query;
         } else if ($this->request->is('post')) {
             return $this->request->data; // pour le chargement des avatars

@@ -39,7 +39,15 @@ console.log("Liste d'objet %o", json);
             <p id="rules_options"> Info : Si v </p>
 
 
+******************************************************
 
+                <?php
+                    echo $this->Form->create('Fightermove', array('type' => 'get'));              
+                    echo $this->Form->inputs(array('legend' => 'Indicate the direction to take', 'direction_move' => array('options' => array('north'=>'north','east'=>'east','south'=>'south','west'=>'west'), 'default' => 'east')));
+                    //echo $this->Form->input('direction_move',array('options' => array('north'=>'north','east'=>'east','south'=>'south','west'=>'west'), 'default' => 'east'));
+                    echo $this->Form->button('Move', array('type' => 'submit'));
+                    echo $this->Form->end();
+                ?>
 
 
 *******************************************************

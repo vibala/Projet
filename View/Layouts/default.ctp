@@ -21,19 +21,23 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
+         <!-- Description des méta-données -->
+         <meta charset="utf-8">
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+         <meta http-equiv="Content-Language" content="fr" />
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $this->fetch('title'); ?>
 	</title>
+         
 	<?php
-		echo $this->Html->meta('icon');
-                echo $this->Html->css('cake.generic');
+		echo $this->Html->meta('icon');                
                 echo $this->Html->css('jquery-ui');
-                
-                //echo $this->Html->css('webarena');
-                echo $this->Html->script('jquery.js'); // Inclut la librairie Jquery
-                echo $this->Html->script('jquery-ui.js'); // Inclut la librairie Jquery                  
-		echo $this->fetch('meta');
+                echo $this->Html->css('webarena');
+                echo $this->Html->css('cake.generic'); // feuille de style du framework cakephp                
+                echo $this->Html->script('jquery.js'); // Inclut implicitement la librairie Jquery dans l'en-tête de chaque page                
+		echo $this->Html->script('jquery-ui.js');
+                echo $this->fetch('meta'); 
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
@@ -42,14 +46,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     
     <nav>     
         <ul>
-            <li class="home"><a href="accueil">Accueil</a></li>
-            <li class="tutorials"><a href="#">Connexion</a></li>
-            <li class="about"><a href="#">Combattants</a></li>
+            <li class="home"><a href="accueil">Home</a></li>
+            <li class="tutorials"><a href="connexion">Connexion</a></li>
+            <li class="about"><a href="fighter">Fighters</a></li>
             <li class="about"><a href="sight">Vision</a></li>
-            <li class="about"><a href="#">Journal</a></li>
-            <li class="about"><a href="#">About</a></li>
-            <li class="news"><a href="#">Newsletter</a></li>
-            <li class="contact"><a href="#">Contact</a></li>
+            <li class="about"><a href="news">News</a></li>
+            <li class="about"><a href="hall_of_fame">Hall of Fame</a></li>
+            <li class="news"><a href="forum">Forum</a></li>
+            <li class="contact"><a href="contact">Contact</a></li>
         </ul>
     </nav>
     
@@ -62,7 +66,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
-
+                        
+                        <!-- Voilà l'endroit ou je souhaite que mes vues soient affichées -->
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
