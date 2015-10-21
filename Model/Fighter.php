@@ -8,21 +8,30 @@ Configure::write('Largeur',15);
 class Fighter extends AppModel {
     
 
-    public $displayField = 'name';
+    
     public $name = "Fighter";
     
-    /*. By default, the model uses the lowercase, plural form of the model’s class name. */
-     public $belongsTo = array(
-        /*'Surrounding' => array(
-            'className' => 'Surrounding',
-            'foreignKey' => 'surrounding_id'
-        ), NE marche pas car il n'y a pas d'attributs surroundings ds la table Fighters*/
-        'Player' => array(
-            'className' => 'Player',
-            'foreignKey' => 'player_id',
-        ),
-         
+    // Un combattant peut posséder plusieurs objets
+    public $hasMany = array(        
+          'Fighter_Tools' => array(
+              'className' => 'Tool'
+          )       
     );
+     
+    // Un combattant appartient à plusieurs évènements
+    // Un combattant appartient à un seul joueur
+    public $belongsTo = array(
+        'Fighter_Event' => array(
+                'className' => 'Event',
+                'foreignKey' => 'next_action_time'                
+        ),
+        'Fighter_Player' => array(
+            'className' => 'Player',
+            'foreignKey' => 'player_id'
+        )
+    );
+    
+    
     
     /*Fonction pour vérifier si une attaque est réussie ou pas*/
     public function checkThreshold($level_attaque,$level_attaquant){
@@ -188,7 +197,8 @@ class Fighter extends AppModel {
             //La caractéristique de force détermine combien de point de vie perd son adversaire 
             // quand le combattant réussit son action d'attaque.
             $fighter_current_xp = ($fighter_data['Fighter']['xp'] + $ennemi_previous_level);
-            //$this->delete($enemy_data['Fighter']['id']); // supprime le tuple             
+            $this->delete($enemy_data['Fighter']['id']); // supprime le tuple             
+            
        }
            
         // tous les 4 points d'expériences, le combattant change de niveau 
@@ -255,7 +265,7 @@ class Fighter extends AppModel {
            // Stockage le résultat de l'appel executeAttack
            $options = $this->executeAttack($fighterName,$enemyName);           
        }else{            
-         //  return array('attack' => 'failed');
+           return array('attack' => 'failed');
        }
 
        
@@ -323,8 +333,13 @@ class Fighter extends AppModel {
            }
        }
        
-       $data = 
-               array(
+        // Stockage de la date de création du combattant
+        $date = date("Y-m-d H:i:s");
+        
+        // Appel au model Event pour enregistrer l'évènement dans la table Events
+        $this->MyEvent->addCharacterEvent($character_name,$date,$x,$y);
+        
+        $data =  array(
                    "Fighter" => array(
                        "name" => $character_name,
                        "player_id" => $player_id,
@@ -336,11 +351,12 @@ class Fighter extends AppModel {
                        "skill_strength" => 1,
                        "skill_health" => 10,
                        "current_health" => 3,
-                       "next_action_time" => "0000-00-00 00:00:00",
+                       "next_action_time" => $date,
                        "guild_id" => NULL
                     )
                 );
        
+       pr($data);
        // save
        $this->save($data);
        
@@ -412,6 +428,18 @@ class Fighter extends AppModel {
     public function getSkillSightFromFighter(){
         $fighters_ss = $this->find('all',array('fields' => array('Fighter.skill_sight')));
         return $fighters_ss;                
+    }
+    
+    // ON récupère les niveaux de chacuns
+    public function getLevelFromFighter(){
+        $fighter_le = $this->find('all',array('fields' => array('Fighter.level')));
+        return $fighter_le;
+    }
+    
+    // ON récupère les niveaux de chacuns
+    public function getSkillStrengthFromFighter(){
+        $fighter_sst = $this->find('all',array('fields' => array('Fighter.skill_strength')));
+        return $fighter_sst;
     }
 }
 ?>

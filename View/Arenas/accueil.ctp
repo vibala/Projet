@@ -6,6 +6,8 @@
     <?php echo $this->HTML->css(array('style', 'jcarousel.connected-carousels'));?>
     
     
+   
+    
         <div class="wrapper">
             <h1>Connected Carousels</h1>
             
@@ -60,4 +62,9 @@
                 
             </div>
         </div>
-
+        
+        <section id="intro">
+            <iframe width="420" height="345"
+                src="http://www.youtube.com/embed/XGSy3_Czz8k">
+            </iframe>
+        </section>

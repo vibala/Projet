@@ -28,7 +28,8 @@ class ArenasController extends AppController {
         
        //$fighters_xp;
        //$fighter_skill_sight;
-    }
+    }    
+    
     
     public function hall_of_fame_ajax_processing(){
         // Récupération des valeurs de chaque caractéristique des combattants
@@ -36,11 +37,15 @@ class ArenasController extends AppController {
         $fighters_current_health = $this->Fighter->getCurrentHealthFromFighter();
         $fighters_skill_sight = $this->Fighter->getSkillSightFromFighter();
         $fighters_xp = $this->Fighter->getXPFromFighter();
+        $fighters_le = $this->Fighter->getLevelFromFighter();
+        $fighters_sst = $this->Fighter->getSkillStrengthFromFighter();
         $data = array(
           'names' => $fightersname,
           'current_healths' => $fighters_current_health,
           'skill_sights'  => $fighters_skill_sight,
-          'experiences' => $fighters_xp
+          'experiences' => $fighters_xp,
+          'levels' => $fighters_le,
+          'skill_strengths' => $fighters_sst
         );
         
         

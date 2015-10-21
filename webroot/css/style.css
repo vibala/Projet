@@ -44,7 +44,15 @@ pre {
 }
 
 .wrapper {
-    max-width: 620px;
-    padding: 0 20px 40px 20px;
-    margin: auto;
+    width:50%;
+    padding: 0 20px 40px 20px;   
+    //border-style:solid;
+    float:left;    
+}
+
+
+iframe{
+    //border-style:solid;    
+    padding-top: 150px;
+    border:none;
 }
