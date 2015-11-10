@@ -1,0 +1,88 @@
+body {
+  margin: auto;  
+  background: #F0EFE7;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.0em;
+  
+}
+ 
+nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  font-family: 'Oswald', sans-serif;  
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 2px solid #888;
+  display:inline-block;
+  margin-right:20px;
+}
+ 
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+nav a:hover {
+  background-color: #005f5f;
+}
+ 
+nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+/*Titres*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arvo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  //text-align: center;
+  font-weight: normal;
+  text-rendering: optimizelegibility;
+}
+
+h1{
+    margin-left: 30px;
+    color : #667966; 
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2{
+    color : #4775D1;
+    font-size: 1.2em;
+}
+
+#move_fighter{
+    margin-left: 50px;
+}
+
+#move_to_next_level{
+  margin-top:  20px;
+  margin-left: 50px;
+}
+
+#choose_ennemy{
+    margin-top:  20px;
+    margin-left: 50px;
+}
+
+#create_avatar{
+    margin-top:  20px;
+    margin-left: 50px;
+}
+
+#des_character{
+    margin-top:  20px;
+    margin-left: 50px;
+}
+
+#footer{
+    clear:both;
+}

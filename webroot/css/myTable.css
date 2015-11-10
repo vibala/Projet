@@ -1,0 +1,22 @@
+.setSize
+{
+ width: 30px;
+ height:30px;
+}
+.disapear
+{
+display : none;
+}
+.putCash
+{
+    background-color: grey;
+    color : grey;
+}
+#gameInterface
+{
+    background-color: #B0C4DE;
+}
+#tableFightersState
+{   
+    background-color: #B0C4DE;
+}
